@@ -1,20 +1,21 @@
 #include "lib.c"
 #include <ncurses.h>
-
-void registermenu(){
-    printw("register has been calle");
-}
+#include "menus/register/register.c"
 
 void itemmenu(){
-    printw("item has been calle");
+    printw("item has been called");
 }
 
 void inventorymenu(){
-    printw("inventory has been calle");
+    printw("inventory has been called");
 }
 
 void spoiloutmenu(){
-    printw("spoilout has been calle");
+    printw("spoilout has been called");
+}
+
+void testingmenu(){
+    printw("testing has been called");
 }
 
 int init_curses(){
@@ -36,6 +37,7 @@ int home_screen(){
         {"items", itemmenu},
         {"inventory", inventorymenu},
         {"spoilout", spoiloutmenu},
+        {"test", testingmenu},
         {NULL, NULL}
     };
 
